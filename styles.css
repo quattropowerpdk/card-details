@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.front_card {
+  width: 270px;
+  position: absolute;
+  top: 13.5rem;
+  left: 2rem;
+  z-index: 2;
+}
+
+.front_card_picture {
+  width: 100%;
+  height: 100%;
+}
+
+.back_card {
+  width: 270px;
+  position: absolute;
+  top: 4.7rem;
+  left: 8rem;
+}
+
+.back_card_text {
+  position: absolute;
+  color: hsl(0, 0%, 100%);
+  right: 3.5rem;
+  top: 6.6rem;
+  font-size: 1.1rem;
+}
+
+.back_card_picture {
+  width: 100%;
+  height: 100%;
+}
+
+.upper_left {
+  position: relative;
+}
+
+.front_card_circle {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 60px;
+}
+
+.front_card_circle_img {
+  width: 100%;
+}
+
+.front_card_number {
+  position: absolute;
+  top: 7.7rem;
+  font-size: 2rem;
+  color: hsl(0, 0%, 100%);
+  left: 3rem;
+}
+
+.front_card_name {
+  position: absolute;
+  top: 12rem;
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 100%);
+  left: 1rem;
+}
+
+.front_card_date {
+  position: absolute;
+  top: 12rem;
+  font-size: 1rem;
+  color: hsl(0, 0%, 100%);
+  right: 1rem;
+}
+
+.bottom_right {
+  background-color: hsl(0, 0%, 100%);
+  margin-top: 13rem;
+  padding: 2rem;
+}
+
+.input_input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+  width: 320px;
+  max-width: 320px;
+}
+
+input {
+  padding: 1.3rem;
+  border-radius: 1rem;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.197);
+  font-size: 1.5rem;
+}
+
+::placeholder {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.9rem;
+}
+
+.input_date_flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.number_first {
+  max-width: 8rem;
+  text-align: center;
+}
+
+.number_second {
+  max-width: 8rem;
+  text-align: center;
+}
+
+.number_third {
+  max-width: 14rem;
+  text-align: left;
+}
+
+label {
+  margin-top: 2.9rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.btn {
+  width: 320px;
+  max-width: 320px;
+  padding: 1.3rem;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.8rem;
+  border-radius: 1rem;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.mmyy {
+  margin-left: 2.7rem;
+}
+
+.cvc {
+  margin-left: 5.7rem;
+}
+
+.error {
+  color: hsl(0, 100%, 66%);
+  font-size: 1.4rem;
+}
+
+.card_data_error {
+  margin-top: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.registration {
+  margin-left: 0;
+  margin-bottom: 15rem;
+}
+
+.registration_circle_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.registration_h1 {
+  font-size: 2.5rem;
+}
+
+.registration_p {
+  font-size: 1.5rem;
+  color: hsl(279, 6%, 55%);
+}
+
+@media only screen and (min-width: 870px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+  }
+
+  .front_card {
+    left: 130px;
+    top: 100px;
+    width: 300px;
+  }
+
+  .back_card {
+    left: 200px;
+    top: 290px;
+    width: 300px;
+  }
+
+  .back_card_text {
+    top: 7.4rem;
+  }
+
+  .bottom_right {
+    width: 100%;
+    margin-top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+  }
+
+  .front_card_name {
+    top: 13rem;
+  }
+
+  .front_card_date {
+    top: 13rem;
+  }
+
+  .upper_left_container_picture {
+    max-width: 380px;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+  }
+
+  .upper_left_container_picture img {
+    display: block;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .input_input {
+    max-width: 260px;
+  }
+
+  .button {
+    width: 260px;
+  }
+
+  .number_first,
+  .number_second,
+  .number_third {
+    max-width: 80px;
+  }
+
+  .bottom_right {
+    margin-left: 60px;
+  }
+
+  ::placeholder {
+    font-size: 1.4rem;
+  }
+  .front_card,
+  .back_card {
+    left: 8.2rem;
+  }
+
+  .cvc {
+    margin-left: 2rem;
+  }
+
+  .mmyy {
+    margin-left: 1.4rem;
+  }
+
+  .hidden {
+    display: none;
+  }
+}

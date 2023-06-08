@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="upper_left">
+        <div class="upper_left_container_picture">
+          <picture>
+            <source
+              media="(min-width: 870px)"
+              srcset="images/bg-main-desktop.png"
+            />
+            <img class="second_pic" src="images/bg-main-mobile.png" />
+          </picture>
+        </div>
+
+        <div class="front_card">
+          <img class="front_card_picture" src="images/bg-card-front.png" />
+          <div class="front_card_circle">
+            <img class="front_card_circle_img" src="images/card-logo.svg" />
+          </div>
+          <p class="front_card_number">0000 0000 0000 0000</p>
+          <p class="front_card_name">Jane Appleseed</p>
+          <p class="front_card_date">
+            <span class="front_card_date_month">00</span>/<span
+              class="front_card_date_year"
+              >00</span
+            >
+          </p>
+        </div>
+
+        <div class="back_card">
+          <img class="back_card_picture" src="images/bg-card-back.png" />
+          <p class="back_card_text">000</p>
+        </div>
+      </div>
+
+      <!-- Bottom right container -->
+
+      <div class="bottom_right">
+        <form class="form">
+          <div class="input_name input_input">
+            <label for="name"> Cardholder Name</label>
+            <input type="text" id="name" placeholder=" e.g. Jane Appleseed" />
+          </div>
+          <p class="error card_holder_name hidden">
+            Name field cannot be empty
+          </p>
+
+          <div class="input_number input_input">
+            <label for="number">Card Number </label>
+            <input
+              maxlength="19"
+              type="text"
+              id="number"
+              placeholder=" e.g. 1234 5678 9123 0000"
+            />
+          </div>
+          <p class="error card_number_error hidden">Wrong card number format</p>
+
+          <div class="input_date input_input">
+            <label for="date"
+              >Exp. Date <span class="mmyy">(MM/YY)</span>
+              <span class="cvc">CVC</span>
+            </label>
+            <div class="input_date_flex">
+              <input
+                min="1"
+                max="12"
+                class="number_first"
+                type="number"
+                id="date"
+                placeholder="MM"
+              />
+              <input
+                min="21"
+                max="30"
+                class="number_second"
+                type="number"
+                id="date1"
+                placeholder="YY"
+              />
+              <input
+                maxlength="3"
+                class="number_third"
+                type="text"
+                id="date2"
+                placeholder="e.g. 123 "
+              />
+            </div>
+            <p class="error card_data_error hidden">Can't be blank</p>
+          </div>
+          <button class="btn button">Confirm</button>
+        </form>
+      </div>
+
+      <!-- Registration -->
+
+      <div class="bottom_right registration hidden">
+        <div class="registration_circle_container">
+          <div class="registration_circle">
+            <img src="images/icon-complete.svg" />
+          </div>
+          <h1 class="registration_h1">Thank You!</h1>
+          <p class="registration_p">We've added your card details</p>
+          <button class="btn button_continue">Continue</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
